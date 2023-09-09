@@ -2,9 +2,9 @@ import React,{ useState } from 'react';
 
 import About from "./components/About.jsx";
 import Login from "./components/Login.jsx";
-import home from './components/home.jsx';
+import LandingPage from './components/LandingPage.jsx';
 import './App.css';
-import {Switch,Route,Redirect} from 'react-router-dom'
+import { BrowserRouter,Routes,Route } from 'react-router-dom'
 
 function App() {
   
@@ -15,7 +15,7 @@ function App() {
       
     <BrowserRouter>
         <Routes>
-          <Route path='/' element={<home/>}/>
+          <Route path='/' element={<LandingPage/>}/>
         </Routes>
         <Routes>
           <Route path='/about' element={<About/>}/>
