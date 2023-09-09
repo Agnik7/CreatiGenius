@@ -17,7 +17,10 @@ export default function Login() {
   return (
     <>
     <Nav/>
+    <img src="./src/assets/pic10.png" alt="img" id="one"></img>
+    <img src="./src/assets/pic11.png" alt="img" id="two"></img>
     <div className="login">
+
         <h1>Login</h1>
         <div className="email_div item">
             <input type="email" name="email" id="email" placeholder='Enter Email'/>

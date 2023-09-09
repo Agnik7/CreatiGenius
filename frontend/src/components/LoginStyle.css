@@ -68,11 +68,34 @@
     border: none;
     border-radius: 1.5rem;
     color:var(--font-col);
+    transition: all 0.1s linear;
 
+}
+.btn button:hover
+{
+    cursor: pointer;
+    background-color: var(--font-col);
+    color: var(--font-col-accent);
+    border: 2px solid var(--font-col-accent); 
 }
 .sign_up,.click{
     cursor: pointer;
     font-weight: 600;
+}
+#one,#two
+{
+    width:30rem;
+    position: absolute;
+}
+#one
+{
+    left:3%;
+    top:25%;
+}
+#two
+{
+    right:3%;
+    top:25%;
 }
 
 
@@ -81,4 +104,11 @@
         min-width: none;
         max-width: 25rem;
     }
+}
+@media (max-width:1450px){
+    #one,#two
+{
+    display: none;
+    
+}
 }

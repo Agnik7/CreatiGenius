@@ -5,6 +5,8 @@ export default function Forgot() {
   return (
     <>
     <Nav/>
+    <img src="./src/assets/pic14.png" alt="img" id="one"></img>
+    <img src="./src/assets/pic15.png" alt="img" id="two"></img>
     <div className="login">
         <h1>Reset Password</h1>
         <div className="email_div item">

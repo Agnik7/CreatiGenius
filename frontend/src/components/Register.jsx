@@ -11,6 +11,8 @@ export default function Register() {
   return (
     <>
     <Nav/>
+    <img src="./src/assets/pic12.png" alt="img" id="one"></img>
+    <img src="./src/assets/pic13.png" alt="img" id="two"></img>
     <div className="login">
         <h1>Register</h1>
         <div className="name_div item">
