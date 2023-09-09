@@ -1,6 +1,13 @@
-import React from 'react'
-import './Navstyle.css'
+import React from 'react';
+import Nav from './Nav';
+import './LoginStyle.css';
+import {useNavigate} from 'react-router-dom';
 export default function Register() {
+    const navigate=useNavigate();
+    const handleLoginRoute=()=>
+    {
+        navigate('/login');
+    }
   return (
     <>
     <Nav/>
@@ -18,16 +25,17 @@ export default function Register() {
         </div>
         <div className="password_div item">
             <input type="password" name="password" id="password" placeholder='Enter password'/>
-            <input type="password" name="password" id="password" placeholder='Confirm password'/>
 
         </div>
-        
+        <div className="confirm_div item">
+            <input type="password" name="confirm_password" id="confirm_password" placeholder='Confirm password'/>
+        </div>
         
         <div className="btn">
-            <button id="login">Register</button>
+            <button id="register">Register</button>
         </div>
         <div className="register">
-            Already an user? <span className="sign_up"><a href="#">Login</a></span>
+            Already an user? <span className="sign_up" onClick={handleLoginRoute}>Login</span>
         </div>
 
     </div>

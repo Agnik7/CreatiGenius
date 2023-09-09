@@ -4,9 +4,9 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-width: 20rem;
+    min-width: 25rem;
     max-width: 35rem;
-    padding: 1rem;
+    padding: 1rem 2rem;
   
   border:2px solid var(--font-col-accent);
   border-radius: 2rem;
@@ -70,6 +70,15 @@
     color:var(--font-col);
 
 }
+.sign_up,.click{
+    cursor: pointer;
+    font-weight: 600;
+}
 
 
-
+@media (max-width:450px){
+    .login{
+        min-width: none;
+        max-width: 25rem;
+    }
+}

@@ -4,9 +4,10 @@ import About from "./components/About.jsx";
 import Login from "./components/Login.jsx";
 import LandingPage from './components/LandingPage.jsx';
 import './App.css';
-import { BrowserRouter,Routes,Route } from 'react-router-dom'
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Nav from './components/Nav.jsx';
 import Register from './components/Register.jsx';
+import Forgot from './components/Forgot.jsx';
 function App() {
   
 
@@ -27,7 +28,9 @@ function App() {
         <Routes>
           <Route path='/register' element={<Register/>}/>
         </Routes>
-        
+        <Routes>
+          <Route path='/reset' element={<Forgot/>}/>
+        </Routes>
       </BrowserRouter>
       
     </>

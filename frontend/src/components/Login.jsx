@@ -1,17 +1,19 @@
-import React from 'react'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faEnvelope,faLock} from '@fortawesome/free-solid-svg-icons'
-import Nav from './Nav'
-import './LoginStyle.css'
-import Register from './Register'
-import {useNavigate} from 'react-router-dom'
+import React from 'react';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faEnvelope,faLock} from '@fortawesome/free-solid-svg-icons';
+import Nav from './Nav';
+import './LoginStyle.css';
+import Register from './Register';
+import {useNavigate} from 'react-router-dom';
 export default function Login() {
     const navigate=useNavigate();
     const handleRegisterRoute=()=>
     {
         navigate('/register');
     }
-    
+    const handleForgotRoute=()=>{
+        navigate('/reset');
+    }
   return (
     <>
     <Nav/>
@@ -29,7 +31,7 @@ export default function Login() {
         
         <div className="forgot">
             
-            <span className="new">Forgot Password?<span className="click"><a href="#">Click Here</a></span></span>
+            <span className="new">Forgot Password?<span className="click" onClick={handleForgotRoute}>Click Here</span></span>
         </div>
         <div className="btn">
             <button id="login">Login</button>
