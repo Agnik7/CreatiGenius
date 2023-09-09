@@ -47,6 +47,7 @@
   border: none;
   border-radius: 1.5rem;
   color: var(--font-col);
+  transition: all 0.2s linear;
 }
 .main .left_segment .About_btn #about:hover {
   cursor: pointer;
