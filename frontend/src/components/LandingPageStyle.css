@@ -1,0 +1,78 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: 100%;
+  gap: 10rem;
+}
+
+.main .right_segment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  padding: 1rem;
+  margin:1rem;
+}
+.main .right_segment img
+{
+    width: 100%;
+
+}
+.main .left_segment {
+    
+    width: 60%;
+  }
+.main .left_segment h1,
+.main .left_segment p {
+  padding: 1rem;
+  
+}
+.main .left_segment .About_btn {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  
+}
+.main .left_segment .About_btn #about {
+  width: 10rem;
+  height: 3rem;
+  margin: 1rem;
+  font-size: 1.2rem;
+  background-color: var(--font-col-accent);
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 1.5rem;
+  color: var(--font-col);
+}
+.main .left_segment .About_btn #about:hover {
+  cursor: pointer;
+  background-color: var(--font-col);
+  color: var(--font-col-accent);
+  border: 2px solid var(--font-col-accent);
+}
+@media (max-width: 1235px) {
+    .main
+    {
+        gap:0;
+        justify-content: space-between;
+    }
+    .main .right_segment ,.main .left_segment
+    {
+      width: 100%;
+    }
+    
+  } 
+ @media (max-width: 770px) {
+  .main  {
+    flex-direction: column;
+  }
+  .main .right_segment ,.main .left_segment
+  {
+    width: 100%;
+  }
+  
+} 
