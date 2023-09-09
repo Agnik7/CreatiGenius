@@ -6,7 +6,7 @@ import LandingPage from './components/LandingPage.jsx';
 import './App.css';
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import Nav from './components/Nav.jsx';
-
+import Register from './components/Register.jsx';
 function App() {
   
 
@@ -23,6 +23,9 @@ function App() {
         </Routes>
         <Routes>
           <Route path='/login' element={<Login/>}/>
+        </Routes>
+        <Routes>
+          <Route path='/register' element={<Register/>}/>
         </Routes>
         
       </BrowserRouter>

@@ -3,7 +3,15 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faEnvelope,faLock} from '@fortawesome/free-solid-svg-icons'
 import Nav from './Nav'
 import './LoginStyle.css'
+import Register from './Register'
+import {useNavigate} from 'react-router-dom'
 export default function Login() {
+    const navigate=useNavigate();
+    const handleRegisterRoute=()=>
+    {
+        navigate('/register');
+    }
+    
   return (
     <>
     <Nav/>
@@ -27,7 +35,7 @@ export default function Login() {
             <button id="login">Login</button>
         </div>
         <div className="register">
-            Don't have an account? <span className="sign_up"><a href="#">Register</a></span>
+            Don't have an account? <span className="sign_up" onClick={handleRegisterRoute}>Register</span>
         </div>
 
     </div>
