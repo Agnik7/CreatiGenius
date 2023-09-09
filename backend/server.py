@@ -58,6 +58,13 @@ def register_user():
 
 @app.route('/login_user', methods=['POST'])
 def login_user():
+    '''
+        Function to login the user and generate session cookie
+
+        Args:  None
+
+        Returns: JSON, HTTP Status Code
+    '''
     print("============== Login ===============")
     data = request.json
     email = data.get('email')
@@ -79,6 +86,13 @@ def login_user():
 
 @app.route('/forgot_password', methods=['POST'])
 def reset():
+    '''
+        Function to reset the password if the user forgets his/her password
+
+        Args:  None
+
+        Returns: JSON, HTTP Status Code
+    '''
     data = request.json
     email = data.get('email')
     new_password = data.get('new_password')

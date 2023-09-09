@@ -18,6 +18,13 @@ class Database:
     def __init__(self):
         self.name = ''
     def register(self,name, email, password):
+        '''
+            Function to register the user to the database
+
+            Args: name (String), email (String), password (String)
+
+            Returns: True or False based on successfull user registration
+        '''
         existing_user = USER_DETAILS.find_one({"email": email})
         if existing_user:
             print("xxxxxxxxxxxxxxxxxxxxxxxxxxx Error: User already exists in the database.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
@@ -36,6 +43,13 @@ class Database:
             return False
 
     def login(self,email,password):
+        '''
+            Function to login the user by checking if the user's email is present in the database or not.
+
+            Args: email (String), password (String)
+
+            Returns: True or False based on successfull user login
+        '''
         user = USER_DETAILS.find_one({"email": email})
         if user:
             user_password = user["password"]
@@ -50,6 +64,13 @@ class Database:
             return False
     
     def user_id(self,email):
+        '''
+            Function to find user id
+
+            Args: email (String)
+
+            Returns: user id (String)
+        '''
         user = USER_DETAILS.find_one({'email':email})
         return user["_id"]
     def user_name(self):
