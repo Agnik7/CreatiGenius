@@ -10,6 +10,13 @@ class Authenticate:
 
 
     def generate_token(self, uid):
+        '''
+            Function to generate JSON Web Token(JWT) for login session
+
+            Args: uid (String) [The user id]
+
+            Returns: jwt encoded token
+        '''
         expire= timedelta(hours=1)
         session_duration = datetime.utcnow() + expire
         payload = {

@@ -35,7 +35,7 @@ def register_user():
     '''
         Function to register the user to the database
 
-        Args:  None
+        Args: None
 
         Returns: JSON, HTTP Status Code
     '''
@@ -61,7 +61,7 @@ def login_user():
     '''
         Function to login the user and generate session cookie
 
-        Args:  None
+        Args: None
 
         Returns: JSON, HTTP Status Code
     '''
@@ -89,7 +89,7 @@ def reset():
     '''
         Function to reset the password if the user forgets his/her password
 
-        Args:  None
+        Args: None
 
         Returns: JSON, HTTP Status Code
     '''

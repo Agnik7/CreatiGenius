@@ -74,9 +74,23 @@ class Database:
         user = USER_DETAILS.find_one({'email':email})
         return user["_id"]
     def user_name(self):
+        '''
+            Function to return the username of user
+
+            Args: None
+
+            Returns: username (String)
+        '''
         return self.name
     
     def reset_password(self, email, new_password):
+        '''
+            Function to reset the user's password
+
+            Args: email (String), new_password (String)
+
+            Returns: True if password changed successfully, False if there was error
+        '''
         user_details = USER_DETAILS.find_one({'email':email})
         if not user_details:
             print("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Error: User does not exist xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
