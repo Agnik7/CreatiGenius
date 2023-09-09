@@ -5,16 +5,16 @@ import Login from "./components/Login.jsx";
 import LandingPage from './components/LandingPage.jsx';
 import './App.css';
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
-import Navbar from './components/Navbar.jsx';
+import Nav from './components/Nav.jsx';
 
 function App() {
   
 
   return (
     <>
-    <Navbar/>
-      
-    <BrowserRouter>
+    <Nav/>
+    
+     <BrowserRouter>
         <Routes>
           <Route path='/' element={<LandingPage/>}/>
         </Routes>
