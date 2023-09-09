@@ -5,7 +5,7 @@ import Login from "./components/Login.jsx";
 import LandingPage from './components/LandingPage.jsx';
 import './App.css';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
-import Nav from './components/Nav.jsx';
+import InputPage from './components/InputPage.jsx';
 import Register from './components/Register.jsx';
 import Forgot from './components/Forgot.jsx';
 function App() {
@@ -30,6 +30,9 @@ function App() {
         </Routes>
         <Routes>
           <Route path='/reset' element={<Forgot/>}/>
+        </Routes>
+        <Routes>
+          <Route path='/user_input' element={<InputPage/>}/>
         </Routes>
       </BrowserRouter>
       

@@ -1,0 +1,65 @@
+.input-page{
+    min-width: 100vw;
+    display: flex;
+    gap:5rem;
+}
+.input-page .image-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input-page .image-section img{
+    width: 100%;
+}
+.input-page .input-section{
+    margin: 0 2rem;
+    padding: 2rem;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.input-page .input-section *{
+    font-size: 1.3rem;
+}
+.input-page .input-section input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid var(--font-col-accent);
+    padding: 0.5rem 1rem 0.5rem 0;
+}
+.input-page .input-section .Style{
+    border: none;
+    outline: none;
+    margin-block: 1rem;
+}
+.input-page .input-section .Style #dropdown-label{
+    font-size: 1.3rem;
+}
+.start-writing{
+    width: 10rem;
+  height: 3rem;
+  margin: 1rem;
+  font-size: 1.2rem;
+  background-color: var(--font-col-accent);
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 1.5rem;
+  color: var(--font-col);
+}
+.start-writing:hover,.start-writing:active{
+    cursor: pointer;
+  background-color: var(--font-col);
+  color: var(--font-col-accent);
+  border: 2px solid var(--font-col-accent);
+}
+@media (max-width:768px) {
+    .input-page{
+        flex-direction: column;
+    }
+    .input-page .input-section{
+        width: auto;
+    }
+}
