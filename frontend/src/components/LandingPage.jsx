@@ -2,6 +2,7 @@ import React from 'react';
 import Nav from './Nav';
 import {useNavigate} from 'react-router-dom';
 import './LandingPageStyle.css';
+import LandingImage from '../assets/pic5.png';
 export default function LandingPage() {
   const navigate=useNavigate();
     const handleLoginRoute=()=>
@@ -21,7 +22,7 @@ export default function LandingPage() {
         </section>
         <section className="right_segment">
           
-            <img src='./src/assets/pic5.png' alt="creatigenius"></img>
+            <img src={LandingImage} alt="creatigenius"></img>
           
         </section>
       </main>
