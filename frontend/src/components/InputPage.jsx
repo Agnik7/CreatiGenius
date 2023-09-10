@@ -5,7 +5,6 @@ import Nav from './Nav';
 import Image from '../assets/pic7.png';
 import './InputPageStyle.css';
 import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
-import { createClient } from 'pexels';
 export default function InputPage() {
     const baseURL = import.meta.env.VITE_KEY; 
     const navigate = useNavigate();
