@@ -47,7 +47,7 @@ CreatiGenius is your creative companion for instant content generation. With a f
 # The People behind this beautiful maintenance 😎
 
 | [Agnik7](https://github.com/Agnik7) | [IndranjanaChatterjee](https://github.com/IndranjanaChatterjee) |
-|---|---|---|---|---|
+
 
 
 ## Acknowledgments
