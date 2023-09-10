@@ -44,7 +44,7 @@ CreatiGenius is your creative companion for instant content generation. With a f
 
 4. Copy and use the generated content in your projects, blogs, or wherever you need it.
 
-# The People behind this beautiful maintenance 😎
+# The Curious Contributors 😎
 
 | [Agnik Bakshi](https://github.com/Agnik7) | [Indranjana Chatterjee](https://github.com/IndranjanaChatterjee) |
 |---|---|
