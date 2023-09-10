@@ -1,0 +1,96 @@
+.index {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    
+  }
+  .index .parts
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:2rem;
+    padding: 1rem;
+    border-bottom: 5px solid var(--font-col-accent);
+    
+  }
+ 
+  .index .parts span h1,.index .parts span p,h2,.index .join h1
+  {
+    padding:1rem;
+    margin: 1rem;
+    color: var(--font-col-accent);
+    text-align: center;
+    
+  }
+  .index .top_section .open .About_btn #about
+  {
+    width: 10rem;
+  height: 3rem;
+  margin: 2rem;
+  font-size: 1.2rem;
+  background-color: var(--font-col-accent);
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 1.5rem;
+  color: var(--font-col);
+  transition: all 0.2s linear;
+  
+
+  }
+  .index .top_section .open .About_btn #about:hover
+  {
+    cursor: pointer;
+  background-color: var(--font-col);
+  color: var(--font-col-accent);
+  border: 2px solid var(--font-col-accent);
+
+  }
+  .pic
+  {
+    margin: 2rem auto;
+    
+  }
+  .index .join
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:2rem;
+    padding: 1rem;
+  }
+  .p
+  {
+    text-align: center;
+  }
+  @media(max-width:1295px)
+  {
+    .parts{
+        flex-direction: column;
+        width: 100%;
+        
+    }
+    .index .top_section .open
+    {
+        padding-top: 2rem;
+        margin-top: 2rem;
+    }
+  }
+  @media(max-width:650px)
+  {
+    .pic img,.index .parts,.pic
+    {
+        width: 100%;
+    }
+    .index .top_section .open .About_btn
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  }
+  

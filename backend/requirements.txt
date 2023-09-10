@@ -1,0 +1,7 @@
+pyjwt
+pymongo
+bcrypt
+Flask
+flask-cors
+Flask-Session
+openai

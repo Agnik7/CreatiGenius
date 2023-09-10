@@ -4,15 +4,17 @@ import About from "./components/About.jsx";
 import Login from "./components/Login.jsx";
 import LandingPage from './components/LandingPage.jsx';
 import './App.css';
-import { BrowserRouter,Routes,Route } from 'react-router-dom'
-import Nav from './components/Nav.jsx';
-
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import InputPage from './components/InputPage.jsx';
+import Register from './components/Register.jsx';
+import Forgot from './components/Forgot.jsx';
+import OutputPage from './components/OutputPage.jsx';
 function App() {
   
 
   return (
     <>
-    <Nav/>
+    
     
      <BrowserRouter>
         <Routes>
@@ -24,7 +26,18 @@ function App() {
         <Routes>
           <Route path='/login' element={<Login/>}/>
         </Routes>
-        
+        <Routes>
+          <Route path='/register' element={<Register/>}/>
+        </Routes>
+        <Routes>
+          <Route path='/reset' element={<Forgot/>}/>
+        </Routes>
+        <Routes>
+          <Route path='/user_input' element={<InputPage/>}/>
+        </Routes>
+        <Routes>
+          <Route path='/content' element={<OutputPage/>}/>
+        </Routes>
       </BrowserRouter>
       
     </>
