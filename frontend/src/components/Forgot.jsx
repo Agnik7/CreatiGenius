@@ -4,6 +4,7 @@ import Nav from './Nav';
 import { useNavigate } from 'react-router-dom';
 import './LoginStyle.css';
 export default function Forgot() {
+    const baseURL = import.meta.env.VITE_KEY;
     const navigate = useNavigate();
     const [email,setEmail]=useState();
     const [password,setPassword]=useState();
@@ -15,7 +16,7 @@ export default function Forgot() {
                 email: email,
                 new_password:password
             }
-            await axios.post('http://localhost:9000/forgot_password', body)
+            await axios.post(`${baseURL}/forgot_password`, body)
             .then((res)=>{
                 alert('Password changed successfully. Login with new password');
                 navigate('/login');
