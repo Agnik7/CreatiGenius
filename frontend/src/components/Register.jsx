@@ -3,6 +3,8 @@ import React,{useState} from 'react';
 import Nav from './Nav';
 import './LoginStyle.css';
 import {useNavigate} from 'react-router-dom';
+import Pic1 from '../assets/pic12.png';
+import Pic2 from '../assets/pic13.png';
 export default function Register() {
     const baseURL = import.meta.env.VITE_KEY;
     const [name,setName] = useState();
@@ -36,8 +38,8 @@ export default function Register() {
   return (
     <>
     <Nav/>
-    <img src="./src/assets/pic12.png" alt="img" id="one"></img>
-    <img src="./src/assets/pic13.png" alt="img" id="two"></img>
+    <img src={Pic1} alt="img" id="one"></img>
+    <img src={Pic2} alt="img" id="two"></img>
     <div className="login">
         <h1>Register</h1>
         <div className="name_div item">
