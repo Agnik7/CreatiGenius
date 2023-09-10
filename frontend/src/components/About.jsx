@@ -2,6 +2,10 @@ import React from "react";
 import Nav from "./Nav";
 import { useNavigate } from "react-router-dom";
 import "./AboutStyle.css";
+import Pic1 from '../assets/pic6.png';
+import Pic2 from '../assets/pic3.png';
+import Pic3 from '../assets/pic4.png';
+import Pic4 from '../assets/pic9.png';
 export default function About() {
   const navigate = useNavigate();
   const handleLoginRoute = () => {
@@ -28,12 +32,12 @@ export default function About() {
             </div>
           </span>
           <span className="pic">
-            <img src="./src/assets/pic6.png" alt="creatigenius"></img>
+            <img src={Pic1} alt="creatigenius"></img>
           </span>
         </section>
         <section className="middle_section parts">
           <span className="pic">
-            <img src="./src/assets/pic3.png" alt="creatigenius"></img>
+            <img src={Pic2} alt="creatigenius"></img>
           </span>
           <span className="about_us">
             <h1>Our Mission</h1>
@@ -56,12 +60,12 @@ export default function About() {
             </p>
           </span>
           <span className="pic">
-            <img src="./src/assets/pic4.png" alt="creatigenius"></img>
+            <img src={Pic3} alt="creatigenius"></img>
           </span>
         </section>
         <section className="bottom_section parts">
           <span className="pic">
-            <img src="./src/assets/pic9.png" alt="creatigenius"></img>
+            <img src={Pic4} alt="creatigenius"></img>
           </span>
           <span className="why">
             <h1>Why Choose CreatiGenius?</h1>
