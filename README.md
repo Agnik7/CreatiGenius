@@ -54,6 +54,6 @@ CreatiGenius leverages cutting-edge natural language processing techniques. We e
 
 Ready to simplify your content creation process? Give CreatiGenius a try!
 
-[![Try CreatiGenius Now](https://your-repo-url.com/try-creati-genius-now-button.png)](http://localhost:5000)
+
 
 Happy content creation!
