@@ -65,7 +65,6 @@ def login_user():
 
         Returns: JSON, HTTP Status Code
     '''
-    print("============== Login ===============")
     data = request.json
     email = data.get('email')
     password = data.get('password')
@@ -108,6 +107,13 @@ def reset():
 
 @app.route('/generate', methods=['POST'])
 def generate():
+    '''
+        Function to generate the caption and send it to the frontend.
+
+        Args: None
+
+        Returns: JSON, HTTP Status Code
+    '''
     data = request.json
     topic = data.get('topic')
     style = data.get('style')
@@ -122,4 +128,4 @@ def generate():
     else:
         return jsonify({"message":"Error occurred during content generation"},500)
 if __name__ == "__main__" :
-        app.run(host='localhost', port=9000, debug=True)
+        app.run(host='0.0.0.0', port=9000, debug=False)

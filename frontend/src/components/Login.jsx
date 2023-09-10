@@ -4,6 +4,7 @@ import Nav from './Nav';
 import './LoginStyle.css';
 import {useNavigate} from 'react-router-dom';
 export default function Login() {
+    const baseURL = import.meta.env.VITE_KEY;
     const [email,setEmail] = useState();
     const [password,setPassword] = useState();
     const navigate=useNavigate();
@@ -19,7 +20,7 @@ export default function Login() {
             email: email,
             password: password
         }
-        await axios.post('http://localhost:9000/login_user', body)
+        await axios.post(`${baseURL}/login_user`, body)
         .then((res)=>{
             console.log("User logged in succesfully");
             localStorage.setItem('token', res.data.token);

@@ -4,6 +4,7 @@ import Nav from './Nav';
 import './LoginStyle.css';
 import {useNavigate} from 'react-router-dom';
 export default function Register() {
+    const baseURL = import.meta.env.VITE_KEY;
     const [name,setName] = useState();
     const [email,setEmail]=useState();
     const [password,setPassword]=useState();
@@ -21,7 +22,7 @@ export default function Register() {
                 email: email,
                 password: password
             }
-            await axios.post('http://localhost:9000/register_user',body)
+            await axios.post(`${baseURL}/register_user`,body)
             .then((res)=>{
                 console.log("Registered Successfully");
                 navigate('/user_input');
