@@ -17,22 +17,38 @@ CreatiGenius is your creative companion for instant content generation. With a f
 
 ## Getting Started
 
-1. **Clone the Repository:**
+1. **Fork this Repository**
+
+2. **Clone Your Fork:**
    ```shell
-   git clone https://github.com/your-username/creati-genius.git
+   git clone https://github.com/your-username/CreatiGenius.git
    ```
 
-2. **Navigate to the Project Directory:**
+3. **Navigate to the Project Directory:**
    ```shell
    cd CreatiGenius
    ```
 
-3. **Install Dependencies:**
+4. **Install Backend Dependencies:**
    ```shell
+   cd backend
    pip install -r requirements.txt
    ```
-
-
+5. **Install Frontend Dependencies:**
+   ```shell
+   cd frontend
+   npm install
+   ```
+6. **Start server:**
+   ```shell
+   cd backend
+   python server.py
+   ```
+7. **Fire the website:**
+   ```shell
+   cd frontend
+   npm run dev
+   ```
 
 ## Usage
 
