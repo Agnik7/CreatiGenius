@@ -65,7 +65,6 @@ def login_user():
 
         Returns: JSON, HTTP Status Code
     '''
-    print("============== Login ===============")
     data = request.json
     email = data.get('email')
     password = data.get('password')
@@ -108,6 +107,13 @@ def reset():
 
 @app.route('/generate', methods=['POST'])
 def generate():
+    '''
+        Function to generate the caption and send it to the frontend.
+
+        Args: None
+
+        Returns: JSON, HTTP Status Code
+    '''
     data = request.json
     topic = data.get('topic')
     style = data.get('style')
