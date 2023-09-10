@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import { useNavigate,useLocation } from 'react-router-dom';
 import Nav from './Nav';
@@ -8,11 +9,26 @@ import { createClient } from 'pexels';
 export default function InputPage() {    
     const location = useLocation();
     const navigate = useNavigate();
+    const [topic,setTopic] = useState();
     const [style, setStyle] = useState();
     const [wordLimit, setWordLimit] = useState(0);
     const [tone, setTone] = useState();
-    const handleWriting=()=>{
-        console.log("Writing")
+    const handleWriting= async()=>{
+        const body= {
+            topic:topic,
+            style: style,
+            tone:tone,
+            wordLimit:wordLimit
+        }
+        await axios.post('http://localhost:9000/generate',body)
+        .then((res)=>{
+            
+            const data = {content:res.data[0].content}
+            navigate('/content',{state:data});
+        })
+        .catch((err)=>{
+            console.log(err);
+        })
     }
   return (
     
@@ -24,7 +40,7 @@ export default function InputPage() {
                 <img src={Image} alt="Man Reading" />
             </section>
             <section className="input-section">
-                <input type="text" name="topic" id="topic" placeholder='Enter Topic' />
+                <input type="text" name="topic" id="topic" placeholder='Enter Topic' value={topic} onChange={(e)=>{setTopic(e.target.value)}} />
                 <FormControl variant="standard" sx={{ minWidth: 120,backgroundColor:'transparent',borderBottom: '2px solid var(--font-col-accent)'}}>
                     <InputLabel id="demo-simple-select-standard-label">Style</InputLabel>
                     <Select
@@ -59,7 +75,7 @@ export default function InputPage() {
                     <MenuItem value={'Professional'}>Professional</MenuItem>
                     </Select>
                 </FormControl>
-                <input type="number" name="word_limit" id="word_limit" placeholder='Word Limit'/>
+                <input type="number" name="word_limit" id="word_limit" placeholder='Word Limit' value={wordLimit} onChange={(e)=>{setWordLimit(e.target.value)}} />
                 <button className="start-writing" onClick={handleWriting}>Start Writing</button>
 
             </section>

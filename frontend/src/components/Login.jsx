@@ -1,11 +1,11 @@
-import React from 'react';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faEnvelope,faLock} from '@fortawesome/free-solid-svg-icons';
+import axios from 'axios';
+import React,{useState} from 'react';
 import Nav from './Nav';
 import './LoginStyle.css';
-import Register from './Register';
 import {useNavigate} from 'react-router-dom';
 export default function Login() {
+    const [email,setEmail] = useState();
+    const [password,setPassword] = useState();
     const navigate=useNavigate();
     const handleRegisterRoute=()=>
     {
@@ -13,6 +13,21 @@ export default function Login() {
     }
     const handleForgotRoute=()=>{
         navigate('/reset');
+    }
+    const handleLogin = async()=>{
+        const body = {
+            email: email,
+            password: password
+        }
+        await axios.post('http://localhost:9000/login_user', body)
+        .then((res)=>{
+            console.log("User logged in succesfully");
+            localStorage.setItem('token', res.data.token);
+            navigate('/user_input');
+        })
+        .catch(err=>{
+            console.log(err)
+        });
     }
   return (
     <>
@@ -23,12 +38,12 @@ export default function Login() {
 
         <h1>Login</h1>
         <div className="email_div item">
-            <input type="email" name="email" id="email" placeholder='Enter Email'/>
+            <input type="email" name="email" id="email" placeholder='Enter Email' value={email} onChange={(e)=>{setEmail(e.target.value)}}/>
             
 
         </div>
         <div className="password_div item">
-            <input type="password" name="password" id="password" placeholder='Enter password'/>
+            <input type="password" name="password" id="password" placeholder='Enter password' value={password} onChange={(e)=>{setPassword(e.target.value)}}/>
 
         </div>
         
@@ -37,7 +52,7 @@ export default function Login() {
             <span className="new">Forgot Password?<span className="click" onClick={handleForgotRoute}>Click Here</span></span>
         </div>
         <div className="btn">
-            <button id="login">Login</button>
+            <button id="login" onClick={handleLogin}>Login</button>
         </div>
         <div className="register">
             Don't have an account? <span className="sign_up" onClick={handleRegisterRoute}>Register</span>

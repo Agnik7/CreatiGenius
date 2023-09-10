@@ -5,6 +5,11 @@ import './OutputPageStyle.css';
 import Img from '../assets/final-image.png';
 export default function OutputPage() {
   const location = useLocation();
+  const [cont,setCont] = useState(location?.state?.content);
+  const handleCopy = ()=>{
+    navigator.clipboard.writeText(cont);
+    alert("Text copied!!");
+  }
   return (
     <div className='page-container'>
         <Nav/>
@@ -14,8 +19,8 @@ export default function OutputPage() {
             </section>
             <section className='content-section'>
               <h1 className="heading">Generated Content</h1>
-              <textarea name="content" id="content" cols="30" rows="10" value={'value'}></textarea>
-              <button className="copy">Copy to Clipboard</button>
+              <textarea name="content" id="content" cols="30" rows="10" value={cont}></textarea>
+              <button className="copy" onClick={handleCopy}>Copy to Clipboard</button>
             </section>
         </main>
 
