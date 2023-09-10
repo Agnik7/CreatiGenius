@@ -62,8 +62,7 @@ CreatiGenius is your creative companion for instant content generation. With a f
 
 # The Curious Contributors 😎
 
-| [Agnik Bakshi](https://github.com/Agnik7) | [Indranjana Chatterjee](https://github.com/IndranjanaChatterjee) |
-|---|---|
+<img src="https://contributors-img.web.app/image?repo=Agnik7/CreatiGenius" />
 
 
 
