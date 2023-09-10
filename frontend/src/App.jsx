@@ -8,6 +8,7 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import InputPage from './components/InputPage.jsx';
 import Register from './components/Register.jsx';
 import Forgot from './components/Forgot.jsx';
+import OutputPage from './components/OutputPage.jsx';
 function App() {
   
 
@@ -33,6 +34,9 @@ function App() {
         </Routes>
         <Routes>
           <Route path='/user_input' element={<InputPage/>}/>
+        </Routes>
+        <Routes>
+          <Route path='/content' element={<OutputPage/>}/>
         </Routes>
       </BrowserRouter>
       

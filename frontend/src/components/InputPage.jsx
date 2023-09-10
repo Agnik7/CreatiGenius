@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
+import { useNavigate,useLocation } from 'react-router-dom';
 import Nav from './Nav';
 import Image from '../assets/pic7.png';
 import './InputPageStyle.css';
 import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
+import { createClient } from 'pexels';
 export default function InputPage() {    
+    const location = useLocation();
+    const navigate = useNavigate();
     const [style, setStyle] = useState();
     const [wordLimit, setWordLimit] = useState(0);
     const [tone, setTone] = useState();
-
-    const handleWriting = ()=>{
-        console.log("Writing");
+    const handleWriting=()=>{
+        console.log("Writing")
     }
   return (
     
