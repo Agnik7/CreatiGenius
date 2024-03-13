@@ -13,7 +13,7 @@ class Generate:
 
             args: topic(String), content_type(String), word_limit(int), content_tone(String)
 
-            returns: response(String)
+            returns: response(String) 
         '''
         prompt = eval(f'f"{self.GEMINI_PROMPT}"')
         response = self.modelText.generate_content(prompt)
