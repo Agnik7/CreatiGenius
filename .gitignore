@@ -2,6 +2,6 @@ secrets.ps1
 __pycache__/
 */__pycache__
 */flask_session
-*/healmate
+*/creatigenius
 .vscode
 .dist
