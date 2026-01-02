@@ -127,5 +127,9 @@ def generate():
         return jsonify({"message":"Content generated successfully", "content":res},200)
     else:
         return jsonify({"message":"Error occurred during content generation"},500)
+        
+@app.route('/extract', methods=['GET'])
+def extract():
+    return jsonify({"message":"Test"},200)
 if __name__ == "__main__" :
         app.run(host='0.0.0.0', port=9000, debug=False)
